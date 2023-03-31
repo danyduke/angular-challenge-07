@@ -1,0 +1,14 @@
+<h1>Firstname: {{ developer.firstname }}</h1>
+<h1>Lastname: {{ developer.lastname }}</h1>
+<h1>Age: {{ developer.age }}</h1>
+<h1>Gender: {{ developer.gender }}</h1>
+<h2>Bio: {{ developer.bio }}</h2>
+
+<h1>Skills :</h1>
+
+<div [ngStyle]="{ display: 'flex' }">
+  <app-skill
+    *ngFor="let s of developer.skills; index as i"
+    [skill]="developer.skills[i]"
+  ></app-skill>
+</div>
